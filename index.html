@@ -1,0 +1,59 @@
+<!-- 
+
+Práctica P12b - Módulo 3 JS
+
+Reescribe el ejemplo de los números pares e impares utilizando la función o funciones que estimes oportunas para dejarlo más elegante.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		// Declaración de las variables
+		var arrayImpares = [];
+		var arrayPares = [];
+		var valorRandom = 0;
+
+
+		// Declaración de la función para comprobar si el número es par o impar
+		function comprobarNumero(valorRandom) {
+			if (valorRandom %2 != 0) {
+				arrayImpares.push(valorRandom);	
+			} else {
+				arrayPares.push(valorRandom);						
+			}
+		}
+
+		document.write("Numeros al azar:" + "<br>");
+
+		// Bucle para repetir 50 veces
+		for (var i = 0; i < 5; i++) {																									
+			valorRandom = Math.floor((Math.random() * 100) + 1);				
+			document.write(valorRandom + "<br>");
+
+			// Llamada a la función de comprobarNumero declarada más arriba
+			comprobarNumero(valorRandom);													
+		}
+
+		document.write("<br>" + "Array de Impares:" + "<br>");
+
+		// Bucle para recorrer el array de impares y sacar su contenido
+		for (var i = 0; i < arrayImpares.length; i++) {
+			document.write(arrayImpares[i] + " ");
+		}
+
+		// Bucle para recorrer el array de pares y sacar su contenido
+		document.write("<br>" + "<br>" + "Array de Pares:" + "<br>");
+		for (var i = 0; i < arrayPares.length; i++) {
+			document.write(arrayPares[i] + " ");
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
